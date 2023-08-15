@@ -1,35 +1,38 @@
+import logo from "./logo.svg";
 import "./App.css";
 import { marked } from "marked";
 import { useState } from "react";
 
 function App() {
   const [text, setText] = useState(`
-  # This is a H1
+  # This is a H1 
   ## This is a H2
-  [This would be a Link](https://www.freecodecamp.org/learn/front-end-development-libraries/front-end-development-libraries-projects/build-a-markdown-previewer)
+  [This would be a link](https://www.example.com)
 
-  \`function Example (firstLine, secondLine){if (firstLine === X && secondLine === Y) return multiCode;}}\`
-  
-  ### This is some CodeBlock
+  \`const square = function (number) {
+    return number * number;
+  };\`
+
+This is a Code Block!
   \`\`\`
-  { 
+  {
     "firstName": "John",
     "lastName": "Smith",
     "age": 25
   }
   \`\`\`
-You can create **lists**!
-1.First item
-2.Second item
-3.Third item
-> This would be a blockquote
-![This can  be an alt text for an image] (image.jpg)
-Text can be **bold**!`);
+This is a List!
+1. First item
+2. Second item
+3. Third item
+> blockquote
+![Alternate text for an image](image.jpg)
+This can be **bold**`);
   console.log(text);
 
   return (
     <div className="App">
-      <h1>This is My Markdown Previewer</h1>
+      <h1>Markdown Previewer</h1>
       <textarea
         id="editor"
         onChange={(e) => setText(e.target.value, console.log(e.target.value))}
