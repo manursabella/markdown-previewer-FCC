@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import { marked } from "marked";
 import { useState } from "react";
@@ -24,7 +23,7 @@ You can create **lists**!
 2.Second item
 3.Third item
 > This would be a blockquote
-![This can  be an alt text for an image](image.jpg)
+![This can  be an alt text for an image] (image.jpg)
 Text can be **bold**!`);
   console.log(text);
 
